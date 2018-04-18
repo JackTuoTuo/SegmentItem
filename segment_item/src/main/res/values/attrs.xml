@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义分割栏布局 -->
+    <declare-styleable name="SegmentItem">
+        <attr name="segmentLeftImage" format="reference" />
+        <attr name="segmentLeftImageWidth" format="reference|dimension" />
+        <attr name="segmentLeftText" format="reference|string" />
+        <attr name="segmentLeftTextWidth" format="reference|dimension" />
+        <attr name="segmentLeftTextHint" format="reference|string" />
+        <attr name="segmentLeftTextColor" format="reference|color" />
+        <attr name="segmentLeftTextHintColor" format="reference|color" />
+        <attr name="segmentLeftTextSize" format="reference|dimension" />
+
+        <attr name="segmentRightImage" format="reference" />
+        <attr name="segmentRightImageWidth" format="reference|dimension" />
+        <attr name="segmentRightText" format="reference|string" />
+        <attr name="segmentRightTextHint" format="reference|string" />
+        <attr name="segmentRightTextHintColor" format="reference|color" />
+        <attr name="segmentRightTextColor" format="reference|color" />
+        <attr name="segmentRightTextSize" format="reference|dimension" />
+        <attr name="segmentRightTextGravity">
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+        </attr>
+        <attr name="segmentPaddingLeft" format="reference|dimension" />
+        <attr name="segmentPaddingTop" format="reference|dimension" />
+        <attr name="segmentPaddingRight" format="reference|dimension" />
+        <attr name="segmentPaddingBottom" format="reference|dimension" />
+
+        <attr name="segmentArrow" format="reference" />
+        <attr name="segmentEditable" format="boolean" />
+
+        <attr name="segmentHasTopLine" format="boolean" />
+        <attr name="segmentHasBottomLine" format="boolean" />
+    </declare-styleable>
+
+</resources>

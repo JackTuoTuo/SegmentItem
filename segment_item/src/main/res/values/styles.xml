@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 分割栏布局基础样式 -->
+    <style name="SegmentItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="segmentLeftImageWidth">0dp</item>
+        <item name="segmentRightImageWidth">0dp</item>
+        <item name="segmentLeftTextColor">#333333</item>
+        <item name="segmentLeftTextSize">14sp</item>
+        <item name="segmentRightTextColor">#757575</item>
+        <item name="segmentRightTextSize">14sp</item>
+        <item name="segmentRightTextGravity">right</item>
+        <item name="segmentPaddingLeft">10dp</item>
+        <item name="segmentPaddingTop">0dp</item>
+        <item name="segmentPaddingRight">10dp</item>
+        <item name="segmentPaddingBottom">0dp</item>
+        <item name="segmentArrow">@null</item>
+    </style>
+
+
+</resources>
