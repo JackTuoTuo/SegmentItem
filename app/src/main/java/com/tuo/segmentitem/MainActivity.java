@@ -1,4 +1,4 @@
-package com.jack.segmentitem;
+package com.tuo.segmentitem;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

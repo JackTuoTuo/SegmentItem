@@ -1,4 +1,4 @@
-package com.jack.segment_item;
+package com.tuo.customview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
