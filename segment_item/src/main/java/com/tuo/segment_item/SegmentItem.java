@@ -1,4 +1,4 @@
-package com.tuo.customview;
+package com.tuo.segment_item;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -38,16 +38,6 @@ public class SegmentItem extends RelativeLayout {
 
     private LinearLayout layoutSegmentItem;
 
-    private String mLeftText, mRightText;
-    private String mLeftTextHint, mRightTextHint;
-    private float mLeftTextSize, mRightTextSize;
-    private int mLeftImageWidth, mLeftTextWidth, mRightImageWidth;
-    private Drawable mLeftDrawable, mRightDrawable;
-    private int mLeftTextColor, mLeftTextHintColor, mRightTextColor, mRightTextHintColor;
-    private int mRightTextGravity;
-
-    // 右边箭头
-    private Drawable mArrowDrawable;
     // 右文字框是否可输入
     private boolean mEditable;
 
@@ -89,35 +79,35 @@ public class SegmentItem extends RelativeLayout {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SegmentItem, defStyle, R.style.SegmentItem);
 
-        mLeftText = a.getString(R.styleable.SegmentItem_segmentLeftText);
-        mRightText = a.getString(R.styleable.SegmentItem_segmentRightText);
+        String mLeftText = a.getString(R.styleable.SegmentItem_segmentLeftText);
+        String mRightText = a.getString(R.styleable.SegmentItem_segmentRightText);
 
-        mLeftTextHint = a.getString(R.styleable.SegmentItem_segmentLeftTextHint);
-        mRightTextHint = a.getString(R.styleable.SegmentItem_segmentRightTextHint);
+        String mLeftTextHint = a.getString(R.styleable.SegmentItem_segmentLeftTextHint);
+        String mRightTextHint = a.getString(R.styleable.SegmentItem_segmentRightTextHint);
 
-        mLeftTextColor = a.getColor(R.styleable.SegmentItem_segmentLeftTextColor, Color.BLACK);
-        mLeftTextHintColor = a.getColor(R.styleable.SegmentItem_segmentLeftTextHintColor, Color.BLACK);
-        mRightTextColor = a.getColor(R.styleable.SegmentItem_segmentRightTextColor, Color.BLACK);
-        mRightTextHintColor = a.getColor(R.styleable.SegmentItem_segmentRightTextHintColor, Color.BLACK);
+        int mLeftTextColor = a.getColor(R.styleable.SegmentItem_segmentLeftTextColor, Color.BLACK);
+        int mLeftTextHintColor = a.getColor(R.styleable.SegmentItem_segmentLeftTextHintColor, Color.BLACK);
+        int mRightTextColor = a.getColor(R.styleable.SegmentItem_segmentRightTextColor, Color.BLACK);
+        int mRightTextHintColor = a.getColor(R.styleable.SegmentItem_segmentRightTextHintColor, Color.BLACK);
 
-        mLeftTextSize = a.getDimension(R.styleable.SegmentItem_segmentLeftTextSize, sp2px(context, 18));
-        mRightTextSize = a.getDimension(R.styleable.SegmentItem_segmentRightTextSize, sp2px(context, 16));
+        float mLeftTextSize = a.getDimension(R.styleable.SegmentItem_segmentLeftTextSize, sp2px(context, 18));
+        float mRightTextSize = a.getDimension(R.styleable.SegmentItem_segmentRightTextSize, sp2px(context, 16));
 
-        mLeftTextWidth = a.getDimensionPixelSize(R.styleable.SegmentItem_segmentLeftTextWidth, 0);
-        mLeftImageWidth = a.getDimensionPixelSize(R.styleable.SegmentItem_segmentLeftImageWidth, 0);
-        mRightImageWidth = a.getDimensionPixelSize(R.styleable.SegmentItem_segmentRightImageWidth, 0);
+        int mLeftTextWidth = a.getDimensionPixelSize(R.styleable.SegmentItem_segmentLeftTextWidth, 0);
+        int mLeftImageWidth = a.getDimensionPixelSize(R.styleable.SegmentItem_segmentLeftImageWidth, 0);
+        int mRightImageWidth = a.getDimensionPixelSize(R.styleable.SegmentItem_segmentRightImageWidth, 0);
 
-        mLeftDrawable = a.getDrawable(R.styleable.SegmentItem_segmentLeftImage);
-        mRightDrawable = a.getDrawable(R.styleable.SegmentItem_segmentRightImage);
+        Drawable mLeftDrawable = a.getDrawable(R.styleable.SegmentItem_segmentLeftImage);
+        Drawable mRightDrawable = a.getDrawable(R.styleable.SegmentItem_segmentRightImage);
 
-        mRightTextGravity = a.getInt(R.styleable.SegmentItem_segmentRightTextGravity, Gravity.RIGHT);
+        int mRightTextGravity = a.getInt(R.styleable.SegmentItem_segmentRightTextGravity, Gravity.RIGHT);
 
         mPaddingLeft = a.getDimensionPixelOffset(R.styleable.SegmentItem_segmentPaddingLeft, 0);
         mPaddingTop = a.getDimensionPixelOffset(R.styleable.SegmentItem_segmentPaddingTop, 0);
         mPaddingRight = a.getDimensionPixelOffset(R.styleable.SegmentItem_segmentPaddingRight, 0);
         mPaddingBottom = a.getDimensionPixelOffset(R.styleable.SegmentItem_segmentPaddingBottom, 0);
 
-        mArrowDrawable = a.getDrawable(R.styleable.SegmentItem_segmentArrow);
+        Drawable mArrowDrawable = a.getDrawable(R.styleable.SegmentItem_segmentArrow);
         mEditable = a.getBoolean(R.styleable.SegmentItem_segmentEditable, false);
 
         mHasTopLine = a.getBoolean(R.styleable.SegmentItem_segmentHasTopLine, false);
